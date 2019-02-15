@@ -17,6 +17,7 @@ module FormsLab
       @pirate = Pirate.new( params[:pirate][:name], params[:pirate][:height], params[:pirate][:weight] )
       @ships = []
       params[:pirate][:ships].each { |ship| @ships << Ship.new( ship[:name], ship[:type], ship[:booty] ) }
+      binding.pry
       erb :"pirates/show"
     end 
 
